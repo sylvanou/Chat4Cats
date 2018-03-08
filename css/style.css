@@ -3,101 +3,11 @@ body {
   margin: 0;
   background: #FFFFF3; }
 
-/* textarea:focus, input:focus {
-    outline: none;
-} */
 @font-face {
   font-family: "Mont-Royal";
   src: url("../css/fonts/Mont-Royal.ttf"); }
-.login-container, .signup-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  margin: auto;
-  position: relative; }
-
-.back-icon {
-  position: absolute;
-  left: 20px;
-  right: 10px;
-  font-size: 40px; }
-
-.back-icon:hover {
-  animation: changeColor2 5s linear infinite; }
-
-.sign-out {
-  flex: 0 0 40px; }
-
-.name-container {
-  margin: 0 15px; }
-
-.chat-container {
-  display: flex;
-  justify-content: space-between;
-  height: 100vh;
-  flex-direction: column; }
-
-.chat-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  background: #011627;
-  color: #EFFFE9;
-  font-size: 24px;
-  text-align: center;
-  /* width: 100%; */ }
-
-.chat-messages {
-  flex: 1;
-  background-color: #2EC4B6;
-  padding: 10px;
-  overflow-y: auto;
-  overflow-x: hidden; }
-
-.chat-input-container {
-  overflow: hidden;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  border-top: 1px solid black; }
-
-.chat-input-wrapper {
-  height: 100%;
-  font-size: 16px;
-  flex-grow: 1; }
-
-.chat-input {
-  background-color: rgba(0, 0, 0, 0);
-  border: 0;
-  height: 100%;
-  width: 100%;
-  font-size: 16px;
-  padding: 0px 5px;
-  display: flex;
-  flex: 1; }
-
-.chat-btn {
-  height: 100%;
-  flex: 0 0 70px;
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #011627;
-  color: #EFFFE9; }
-
-.icon-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column-reverse;
-  font-family: "Mont-Royal";
-  align-items: center; }
-
-.title {
-  margin: 0 0; }
+textarea:focus, input:focus {
+  outline: none; }
 
 @keyframes changeColor {
   0% {
@@ -123,96 +33,229 @@ body {
     color: #c49c2e; }
   100% {
     color: #2EC4B6; } }
-.ion-social-octocat {
-  top: 20px;
-  font-size: 6em;
-  animation: changeColor 5s linear infinite; }
+/* Scroll Bar */
+.cool-scroll-bar-17::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px; }
 
-.icon {
-  margin-left: 20px;
-  top: 20px;
-  font-size: 8em;
-  animation: changeColor2 10s ease-in-out infinite; }
+.cool-scroll-bar-17::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0); }
 
-.inputs-container {
-  flex: 1;
+.cool-scroll-bar-17::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 178, 178, 0.72);
+  border-radius: 10px; }
+
+.login-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-width: 300px;
-  max-width: 400px; }
+  margin: auto;
+  position: relative; }
+  .login-container .icon-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: "Mont-Royal";
+    align-items: center; }
+    .login-container .icon-container .ion-social-octocat {
+      top: 20px;
+      font-size: 6em;
+      animation: changeColor 5s linear infinite; }
+    .login-container .icon-container .title {
+      margin: 0 0; }
+  .login-container .inputs-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px; }
+    .login-container .inputs-container .input-container {
+      display: flex;
+      margin: 20px 0px; }
+      .login-container .inputs-container .input-container .input-title {
+        text-align: center;
+        padding: 20px;
+        flex: 1; }
+      .login-container .inputs-container .input-container .input-wrapper {
+        flex: 2;
+        display: flex; }
+        .login-container .inputs-container .input-container .input-wrapper .input {
+          flex-grow: 1;
+          font-size: 18px;
+          padding: 10px 0px;
+          height: 35px;
+          border: none;
+          border-bottom: 2px solid  #000; }
+          .login-container .inputs-container .input-container .input-wrapper .input:focus {
+            border-bottom: 2px solid #011627;
+            color: #011627;
+            outline: none; }
+  .login-container .icons-container {
+    display: flex;
+    justify-content: center; }
+    .login-container .icons-container #google_icon {
+      margin: 40px;
+      background: url("../img/google.png") 0 0 no-repeat;
+      background-size: 50px 50px;
+      height: 50px;
+      width: 50px;
+      transition: 100ms; }
+    .login-container .icons-container #facebook_icon {
+      margin: 40px;
+      background: url("../img/facebook.png") 0 0 no-repeat;
+      background-size: 50px 50px;
+      height: 50px;
+      width: 50px; }
+  .login-container .btn-container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end; }
+    .login-container .btn-container .signIn {
+      color: #011627;
+      background: #2EC4B6; }
+    .login-container .btn-container .signUp {
+      color: #EFFFE9;
+      background: #011627; }
+    .login-container .btn-container .btn {
+      text-align: center;
+      width: 100%;
+      padding: 20px 0px;
+      font-size: 1rem; }
 
-.input-container {
+.signup-container {
   display: flex;
-  margin: 10px 0px; }
-
-.input-title {
-  padding: 20px;
-  flex: 1; }
-
-.input-wrapper {
-  flex: 2;
-  display: flex; }
-
-.input {
-  flex-grow: 1;
-  font-size: 18px;
-  padding: 10px 0px;
-  height: 35px;
-  border: none;
-  border-bottom: 2px solid  #000; }
-
-textarea:focus, input:focus {
-  border-bottom: 2px solid #011627;
-  color: #011627;
-  /* background: #2EC4B6; */
-  outline: none; }
-
-#icons_container {
-  display: flex;
-  justify-content: center; }
-
-.icon_hover:hover {
-  height: 60px;
-  width: 60px; }
-
-#google_icon {
-  margin: 40px;
-  background: url("../img/google.png") 0 0 no-repeat;
-  background-size: 50px 50px;
-  height: 50px;
-  width: 50px;
-  transition: 100ms; }
-
-#facebook_icon {
-  margin: 40px;
-  background: url("../img/facebook.png") 0 0 no-repeat;
-  background-size: 50px 50px;
-  height: 50px;
-  width: 50px; }
-
-.btn-container {
-  width: 100%;
-  flex: 1;
-  display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
   flex-direction: column;
-  justify-content: flex-end; }
+  margin: auto;
+  position: relative; }
+  .signup-container .back-icon {
+    position: absolute;
+    left: 20px;
+    right: 10px;
+    font-size: 40px; }
+  .signup-container .back-icon:hover {
+    animation: changeColor2 5s linear infinite; }
+  .signup-container .icon-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: "Mont-Royal";
+    align-items: center; }
+    .signup-container .icon-container .icon {
+      margin-left: 20px;
+      top: 20px;
+      font-size: 8em;
+      animation: changeColor2 10s ease-in-out infinite; }
+    .signup-container .icon-container .title {
+      margin: 0 0; }
+  .signup-container .inputs-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px; }
+    .signup-container .inputs-container .input-container {
+      display: flex;
+      margin: 20px 0px; }
+      .signup-container .inputs-container .input-container .input-title {
+        text-align: center;
+        padding: 20px;
+        flex: 1; }
+      .signup-container .inputs-container .input-container .input-wrapper {
+        flex: 2;
+        display: flex; }
+        .signup-container .inputs-container .input-container .input-wrapper .input {
+          flex-grow: 1;
+          font-size: 18px;
+          padding: 10px 0px;
+          height: 35px;
+          border: none;
+          border-bottom: 2px solid  #000; }
+          .signup-container .inputs-container .input-container .input-wrapper .input:focus {
+            border-bottom: 2px solid #011627;
+            color: #011627;
+            outline: none; }
+  .signup-container .btn-container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end; }
+    .signup-container .btn-container .btn {
+      text-align: center;
+      width: 100%;
+      padding: 20px 0px;
+      font-size: 1rem; }
+    .signup-container .btn-container .signUp {
+      color: #EFFFE9;
+      background: #011627; }
 
-.btn {
-  text-align: center;
-  width: 100%;
-  padding: 20px 0px;
-  font-size: 1rem; }
-
-.signIn {
-  color: #011627;
-  background: #2EC4B6; }
-
-.signUp {
-  color: #EFFFE9;
-  background: #011627; }
+.chat-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  flex-direction: column; }
+  .chat-container .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #011627;
+    color: #EFFFE9;
+    font-size: 24px;
+    text-align: center; }
+    .chat-container .chat-header .name-container {
+      margin: 0px 20px; }
+    .chat-container .chat-header .sign-out {
+      flex: 0 0 60px; }
+  .chat-container .chat-messages {
+    flex: 1;
+    background-color: #2EC4B6;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden; }
+  .chat-container .chat-input-container {
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    border-top: 1px solid black; }
+    .chat-container .chat-input-container .chat-input-wrapper {
+      height: 100%;
+      font-size: 16px;
+      flex-grow: 1; }
+      .chat-container .chat-input-container .chat-input-wrapper .chat-input {
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+        padding: 0px 5px;
+        display: flex;
+        flex: 1; }
+    .chat-container .chat-input-container .chat-btn {
+      height: 100%;
+      flex: 0 0 70px;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #011627;
+      color: #EFFFE9; }
 
 .right {
   flex-flow: row-reverse;
@@ -230,10 +273,11 @@ textarea:focus, input:focus {
 
 .name {
   font-size: 15px;
-  color: #666; }
+  color: #bcb7b7; }
 
 .msg {
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  color: #000; }
 
 .profile-img {
   height: 50px;
@@ -245,21 +289,7 @@ textarea:focus, input:focus {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  color: #666; }
-
-/* Scroll Bar */
-.cool-scroll-bar-17::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 10px; }
-
-.cool-scroll-bar-17::-webkit-scrollbar {
-  width: 6px;
-  background-color: rgba(0, 0, 0, 0); }
-
-.cool-scroll-bar-17::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 178, 178, 0.72);
-  border-radius: 10px; }
+  color: #bcb7b7; }
 
 /* Bubbles */
 /* container */
@@ -268,15 +298,13 @@ textarea:focus, input:focus {
 
 /* CSS talk bubble */
 .talk-bubble {
-  border-radius: 1em;
   z-index: 10;
   margin: 0px;
   display: inline-block;
   position: relative;
   width: 200px;
   height: auto;
-  color: #011627;
-  background-color: #EFFFE9; }
+  background-color: #fff; }
 
 .border {
   border: 8px solid #666; }
@@ -411,18 +439,18 @@ textarea:focus, input:focus {
   border-color: #fff #fff transparent transparent; }
 
 /*
-	left: -8px;
+    left: -8px;
   right: auto;
   top: auto;
-	bottom: -40px;
-	border: 32px solid;
-	border-color: transparent transparent transparent #666;
-	left: 0px;
+    bottom: -40px;
+    border: 32px solid;
+    border-color: transparent transparent transparent #666;
+    left: 0px;
   right: auto;
   top: auto;
-	bottom: -20px;
-	border: 22px solid;
-	border-color: transparent transparent transparent #fff;
+    bottom: -20px;
+    border: 22px solid;
+    border-color: transparent transparent transparent #fff;
 /*Right triangle, placed bottom right side slightly in*/
 .tri-right.border.btm-right:before {
   content: ' ';

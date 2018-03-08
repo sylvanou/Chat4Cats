@@ -15,34 +15,35 @@ export const LoginScreen = () => {
         <div class="icon-container">
             <span class="ion-social-octocat"></span>
             <h1 class="title">Chat 4 Cats!</h1>
-    </div>
+        </div>
 
-    <div class="inputs-container">
-        <div class="input-container">
-            <div class="input-title">Email:</div>
-            <div class="input-wrapper">
-                <input id="email" class="input" type="text">
+        <div class="inputs-container">
+            <div class="input-container">
+                <div class="input-title">Email:</div>
+                <div class="input-wrapper">
+                    <input id="email" class="input" type="text">
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="input-title">Password:</div>
+                <div class="input-wrapper">
+                    <input id="password" class="input" type="password">
+                </div>
             </div>
         </div>
 
-        <div class="input-container">
-            <div class="input-title">Password:</div>
-            <div class="input-wrapper"></div>
-            <input id="password" class="input" type="password">
+        <div class="icons-container" id="icons_container">
+            <div id="google_icon" class="icon_hover"></div>
+            <div id="facebook_icon" class="icon_hover"></div>
+        </div>
+
+        <div class="btn-container">
+            <div id="signin_btn" class="btn signIn">SIGN-IN</div>
+            <div id="signup_btn" class="btn signUp">SIGN-UP</div>
         </div>
     </div>
-
-    <div id="icons_container">
-        <div id="google_icon" class="icon_hover"></div>
-        <div id="facebook_icon" class="icon_hover"></div>
-    </div>
-
-    <div class="btn-container">
-        <div id="signin_btn" class="btn signIn">SIGN-IN</div>
-        <div id="signup_btn" class="btn signUp">SIGN-UP</div>
-    </div>
-</div>
-    `);
+        `);
 
     return container;
 };

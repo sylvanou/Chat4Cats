@@ -11,38 +11,37 @@ export const SignUpScreen = () => {
 
     $(container).html(`
     
-    <div id="signup_screen" class="signup-container">
-    
-    <div>
-        <span id="back_to_login" class="ion-arrow-left-c back-icon"></span>
-    </div>
-
+    <div id="signup_screen" class="signup-container">    
+        <div>
+            <span id="back_to_login" class="ion-arrow-left-c back-icon"></span>
+        </div>
 
         <div class="icon-container">
             <span class="ion-ios-compose icon"></span>
             <h1 class="title">Sign Up!</h1>
-    </div>
+        </div>
 
-    <div class="inputs-container">
-        <div class="input-container">
-            <div class="input-title">Email:</div>
-            <div class="input-wrapper">
-                <input id="email" class="input" type="text">
+        <div class="inputs-container">
+            <div class="input-container">
+                <div class="input-title">Email:</div>
+                <div class="input-wrapper">
+                    <input id="email" class="input" type="text">
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="input-title">Password:</div>
+                <div class="input-wrapper">
+                    <input id="password" class="input" type="password">
+                </div>
             </div>
         </div>
 
-        <div class="input-container">
-            <div class="input-title">Password:</div>
-            <div class="input-wrapper"></div>
-            <input id="password" class="input" type="password">
+        <div class="btn-container">
+            <div id="create_btn" class="btn signUp">Create</div>
         </div>
     </div>
-
-    <div class="btn-container">
-        <div id="create_btn" class="btn signUp">Create</div>
-    </div>
-</div>
-    `);
+        `);
 
     return container;
 };
