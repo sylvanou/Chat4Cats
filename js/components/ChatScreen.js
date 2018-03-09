@@ -114,12 +114,12 @@ export const scroll = () => $('#messages').scrollTop($('#messages')[0].scrollHei
 export const chatScreenEvents = function (user, catImg) {
 
   $('#chat_btn').on('click', function(){
-    sendMessage(user.uid, (user.displayName === null ?  user.email : user.displayName), user.email, catImg);
+    sendMessage(user.uid, (user.displayName === null ?  user.email.split('@')[0] : user.displayName), user.email, catImg);
   });
 
   $('#input_msg').keypress(function (e) {
     if (e.keyCode === 13) {
-      sendMessage(user.uid, (user.displayName === null ?  user.email : user.displayName), user.email, catImg);
+      sendMessage(user.uid, (user.displayName === null ?  user.email.split('@')[0] : user.displayName), user.email, catImg);
     }
   }).keyup(function () {
     isTyping(user.uid);

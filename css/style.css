@@ -97,9 +97,9 @@ textarea:focus, input:focus {
           padding: 10px 0px;
           height: 35px;
           border: none;
-          border-bottom: 2px solid  #000; }
+          border-bottom: 2px solid #DDD; }
           .login-container .inputs-container .input-container .input-wrapper .input:focus {
-            border-bottom: 2px solid #011627;
+            border-bottom: 2px solid #DDD;
             color: #011627;
             outline: none; }
   .login-container .icons-container {
@@ -189,9 +189,9 @@ textarea:focus, input:focus {
           padding: 10px 0px;
           height: 35px;
           border: none;
-          border-bottom: 2px solid  #000; }
+          border-bottom: 2px solid #DDD; }
           .signup-container .inputs-container .input-container .input-wrapper .input:focus {
-            border-bottom: 2px solid #011627;
+            border-bottom: 2px solid #DDD;
             color: #011627;
             outline: none; }
   .signup-container .btn-container {
