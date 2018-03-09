@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import * as firebase from 'firebase';
 import { ChatScreen, chatScreenEvents } from '../components/ChatScreen';
-import { rdmCat } from '../utils/cats';
+import { catImg } from '../utils/cats';
 import { validatePassword, validateEmail } from '../utils/validation';
 
 
@@ -25,7 +25,7 @@ export const emailPasswordLogin = () => {
                 // console.log('user ', user);
 
                 // Random Cat photo url
-                const catImg = rdmCat();
+                // const catImg = rdmCat();
                 $('#login_screen').fadeOut("slow", function () {
                     $('#root').html(ChatScreen(user));
                     chatScreenEvents(user, catImg);
@@ -64,7 +64,7 @@ export const googleLogin = () => {
         // }));
 
         // Random Cat photo url
-        const catImg = rdmCat();
+        // const catImg = rdmCat();
         $('#login_screen').fadeOut("slow", function () {
             $('#root').html(ChatScreen(user));
             chatScreenEvents(user, catImg);            
@@ -99,7 +99,7 @@ export const facebookLogin = () => {
         // }));
 
         // Random Cat photo url
-        const catImg = rdmCat();
+        // const catImg = rdmCat();
         $('#login_screen').fadeOut("slow", function () {
             $('#root').html(ChatScreen(user));
             chatScreenEvents(user, catImg);

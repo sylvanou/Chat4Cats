@@ -14,7 +14,7 @@ export const LoginScreen = () => {
     <div id="login_screen" class="login-container">
         <div class="icon-container">
             <span class="ion-social-octocat"></span>
-            <h1 class="title">Chat 4 Cats!</h1>
+            <h1 class="title">Chat 4 Cats</h1>
         </div>
 
         <div class="inputs-container">

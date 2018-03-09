@@ -1,8 +1,61 @@
 import $ from 'jquery';
 import * as firebase from 'firebase';
-import { db, messages } from '../main';
+import { db, messages, users } from '../main';
 import { LoginScreen } from './LoginScreen';
-import { rdmCat } from '../utils/cats';
+
+export const online = (user, catImg) => {
+  // console.log('online');
+  showTyping(user);
+  
+  let userdata = users.child(user.uid);
+  userdata.set({
+    id: user.uid,
+    date: (new Date()).toString(),
+    name: user.displayName,
+    email: user.email,
+    img: catImg,
+    typing: false
+  });
+}
+
+
+
+export const showTyping = (user) => {
+  users.on('child_changed', function(snapshot) {
+    let person = snapshot.val();
+    let id = "#" + person.id;
+
+    if (person.typing && !$(id).html()) {
+      $("#messages").append(
+        `<div id=${person.id} style="font-size: 12px;">
+        ${person.name || person.email.split('@')[0] } is typing ...
+        </div>`
+      );
+      scroll();
+    }
+    else {
+      $(id).remove();
+    }
+  });
+}
+
+export const offline = (id) => {
+  let obj = {};
+  obj[id] = null;
+  users.update(obj);
+}
+
+export const isTyping = (id) => {
+  let obj ={};
+  if ($('#input_msg').val()) {
+    obj[id + '/typing'] = true;
+    users.update(obj);
+  }
+  else {
+    obj[id + '/typing'] = false;
+    users.update(obj);
+  }
+}
 
 export const ChatScreen = (user) => {
   let container = document.createElement('div');
@@ -11,7 +64,7 @@ export const ChatScreen = (user) => {
       <div id="chat_screen" class="chat-container">
         <div class="chat-header">
           <div class="name-container">          
-            Hi ${ user.displayName === null ? user.email : user.displayName.split(' ')[0]}!
+Hi ${ user.displayName === null ? user.email.split('@')[0] : user.displayName.split(' ')[0]}!
           </div>
           <div id="sign_out" class="sign-out">
             <span class="ion-log-out"></span>
@@ -69,13 +122,14 @@ export const chatScreenEvents = function (user, catImg) {
       sendMessage(user.uid, (user.displayName === null ?  user.email : user.displayName), user.email, catImg);
     }
   }).keyup(function () {
-    // isTyping(user.uid);
+    isTyping(user.uid);
   });
 
   getAllMessages(user);
   
 
-  $('#sign_out').click(function(){
+  $('#sign_out').click(function() {
+    offline(user.uid);
     firebase.auth().signOut().then(function () {
       // Sign-out successful.
       // console.log('signed out');
@@ -149,7 +203,11 @@ export let format = {
   }
 }
 
-
+window.onbeforeunload = function (e) {
+  if(user){
+    offline(user.uid);
+  }
+};
 
 
 

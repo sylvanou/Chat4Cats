@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import * as firebase from 'firebase';
-import { ChatScreen, chatScreenEvents } from '../components/ChatScreen';
-import { rdmCat } from '../utils/cats';
+// import { ChatScreen, chatScreenEvents } from '../components/ChatScreen';
+import { ChatScreen, chatScreenEvents, online } from '../components/ChatScreen';
+import { catImg } from '../utils/cats';
 import { validatePassword, validateEmail } from '../utils/validation';
 
 
@@ -17,18 +18,16 @@ export const emailPasswordLogin = () => {
                 // The signed-in user info.
                 var user = result;
 
-                // localStorage.setItem("session", JSON.stringify({
-                //   token: token,
-                //   method: 'google'
-                // }));
-
-                console.log('user ', user);
-
+                window.user = user;
+                
+                // console.log('user ', user);
+                
                 // Random Cat photo url
-                const catImg = rdmCat();
+                // const catImg = rdmCat();
                 $('#login_screen').fadeOut("slow", function () {
                     $('#root').html(ChatScreen(user));
                     chatScreenEvents(user, catImg);
+                    online(user, catImg);
                 });
             })
             .catch(function (error) {

@@ -9,3 +9,6 @@ export const rdmCat = () => {
     let cat = Math.floor(Math.random() * 6);
     return cats[cat];
 }
+
+export const catImg = rdmCat();
+
