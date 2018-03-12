@@ -66,6 +66,7 @@ export const ChatScreen = (user) => {
           <div class="name-container">          
 Hi ${ user.displayName === null ? user.email.split('@')[0] : user.displayName.split(' ')[0]}!
           </div>
+          <div id="online" class="online"><ul>Online</ul></div>
           <div id="sign_out" class="sign-out">
             <span class="ion-log-out"></span>
           </div>
@@ -114,12 +115,12 @@ export const scroll = () => $('#messages').scrollTop($('#messages')[0].scrollHei
 export const chatScreenEvents = function (user, catImg) {
 
   $('#chat_btn').on('click', function(){
-    sendMessage(user.uid, (user.displayName === null ?  user.email.split('@')[0] : user.displayName), user.email, catImg);
+    sendMessage(user.uid, (user.displayName === null ?  user.email.split('@')[0] : user.displayName.split(' ')[0]), user.email, catImg);
   });
 
   $('#input_msg').keypress(function (e) {
     if (e.keyCode === 13) {
-      sendMessage(user.uid, (user.displayName === null ?  user.email.split('@')[0] : user.displayName), user.email, catImg);
+      sendMessage(user.uid, (user.displayName === null ?  user.email.split('@')[0] : user.displayName.split(' ')[0]), user.email, catImg);
     }
   }).keyup(function () {
     isTyping(user.uid);
@@ -127,6 +128,9 @@ export const chatScreenEvents = function (user, catImg) {
 
   getAllMessages(user);
   
+  $('#online').click(function() {
+    console.log('online clicked');
+  })
 
   $('#sign_out').click(function() {
     offline(user.uid);

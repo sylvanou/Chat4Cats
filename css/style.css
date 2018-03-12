@@ -6,6 +6,44 @@ body {
 @font-face {
   font-family: "Mont-Royal";
   src: url("../css/fonts/Mont-Royal.ttf"); }
+@media only screen and (min-device-width: 320px) and (max-device-width: 360px) and (orientation: portrait) {
+  /* STYLES GO HERE */
+  body {
+    overflow: hidden; }
+    body .login-container {
+      overflow: hidden; }
+    body .login-container .inputs-container .input-container .input-wrapper .input {
+      flex-grow: 1;
+      font-size: 18px;
+      padding: 10px 0px;
+      height: 33px;
+      border: none;
+      border-bottom: 2px solid #DDD;
+      width: 200px; }
+    body .login-container .icon-container {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column-reverse;
+      font-family: "Mont-Royal";
+      align-items: center; }
+    body .login-container .icons-container {
+      width: 100%;
+      flex: 1; }
+    body .login-container .btn-container {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      justify-content: flex-end; }
+    body .signup-container {
+      overflow: hidden; }
+    body .signup-container .icon-container {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column-reverse;
+      font-family: "Mont-Royal";
+      align-items: center; } }
 textarea:focus, input:focus {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
   outline: none;
@@ -14,6 +52,17 @@ textarea:focus, input:focus {
   border-top: none;
   border-bottom: 1px solid #DDD; }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 375px) and (orientation: portrait) {
+  /* STYLES GO HERE */
+  .login-container .icon-container {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: "Mont-Royal";
+    align-items: center; }
+
+  .login-container .icons-container {
+    flex: 0.5; } }
 @keyframes changeColor {
   0% {
     color: #2EC4B6; }
@@ -27,6 +76,11 @@ textarea:focus, input:focus {
     transform: rotate(-15deg); }
   100% {
     color: #2EC4B6; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .login-container .icons-container {
+    flex: 0.3;
+    display: flex;
+    justify-content: center; } }
 @keyframes changeColor2 {
   0% {
     color: #2EC4B6; }
@@ -103,6 +157,7 @@ textarea:focus, input:focus {
             color: #011627;
             outline: none; }
   .login-container .icons-container {
+    flex: 0.3;
     display: flex;
     justify-content: center; }
     .login-container .icons-container #google_icon {
@@ -288,7 +343,7 @@ textarea:focus, input:focus {
 .profile-img {
   height: 50px;
   width: auto;
-  border-radius: 50px; }
+  border-radius: 0.5em; }
 
 .date {
   padding-top: 5px;

@@ -1,12 +1,15 @@
 export const rdmCat = () => {
-    const cat1 = "http://image-cdn.neatoshop.com/styleimg/62464/none/darkgray/default/360960-19;1502479794i.jpg";
-    const cat2 = "https://ih0.redbubble.net/image.120694437.1442/flat,800x800,075,f.u1.jpg";
-    const cat3 = "https://ih1.redbubble.net/image.120695052.1766/flat,800x800,075,f.u1.jpg";
-    const cat4 = "https://img.etsystatic.com/il/3d55ec/1238198642/il_570xN.1238198642_izuf.jpg";
-    const cat5 = "https://ih0.redbubble.net/image.186261692.0061/flat,800x800,075,f.u3.jpg";
-    const cat6 = "https://orig00.deviantart.net/8491/f/2015/047/5/7/kawaii_cat_png_pack_by_kawaiianimeneko2-d8i9sin.jpg";
-    const cats = [cat1, cat2, cat3, cat4, cat5, cat6];
-    let cat = Math.floor(Math.random() * 6);
+    const cat1 = "http://sumbac.fvi-grad.com/Chat4Cats/img/Black.png";
+    const cat2 = "http://sumbac.fvi-grad.com/Chat4Cats/img/Calico.png";
+    const cat3 = "http://sumbac.fvi-grad.com/Chat4Cats/img/Scottish_Fold.png";
+    const cat4 = "http://sumbac.fvi-grad.com/Chat4Cats/img/Siamese.png";
+    const cat5 = "http://sumbac.fvi-grad.com/Chat4Cats/img/Snowshoe.png";
+    const cat6 = "http://sumbac.fvi-grad.com/Chat4Cats/img/Tabby.png";
+    const cat7 = "http://sumbac.fvi-grad.com/Chat4Cats/img/Tabby_Grey.png";
+    const cat8 = "http://sumbac.fvi-grad.com/Chat4Cats/img/Tuxedo.png";
+    const cat9 = "http://sumbac.fvi-grad.com/Chat4Cats/img/White.png";
+    const cats = [cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8, cat9];
+    let cat = Math.floor(Math.random() * 9);
     return cats[cat];
 }
 
