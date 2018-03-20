@@ -237,7 +237,10 @@ textarea:focus, input:focus {
         flex: 1; }
       .signup-container .inputs-container .input-container .input-wrapper {
         flex: 2;
-        display: flex; }
+        display: flex;
+        flex-wrap: wrap; }
+        .signup-container .inputs-container .input-container .input-wrapper .passwordRequirements {
+          font-size: 12px; }
         .signup-container .inputs-container .input-container .input-wrapper .input {
           flex-grow: 1;
           font-size: 18px;

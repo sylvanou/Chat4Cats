@@ -57,7 +57,11 @@
         .input-wrapper {
           flex: 2;
           display: flex;
+          flex-wrap: wrap;
   
+          .passwordRequirements {
+            font-size: 12px;
+          }
           .input {
             flex-grow: 1;
             font-size: 18px;

@@ -33,6 +33,9 @@ export const SignUpScreen = () => {
                 <div class="input-title">Password:</div>
                 <div class="input-wrapper">
                     <input id="password" class="input" type="password">
+                    <div class="passwordRequirements">
+                    Password must be at least 6 characters with 1 uppercase letter and 1 number.
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,6 +78,7 @@ export const signUpScreenEvents = () => {
         });
       }
       else {
+        $(".passwordRequirements").css("color", "red");
         alert('Please insert valid email and password');
       }
     });
