@@ -1,115 +1,116 @@
 .login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+
+  .icon-container {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    font-family: "Mont-Royal";
     align-items: center;
-    height: 100vh;
+    .ion-social-octocat {
+      top: 20px;
+      font-size: 6em;
+      animation: changeColor 5s linear infinite;
+    }
+    .title {
+      letter-spacing: 3px;
+      margin: 0 0;
+    }
+  }
+
+  .inputs-container {
+    padding-right: 10px;
+    flex: 1;
+    display: flex;
     flex-direction: column;
-    margin: auto;
-    position: relative;
-  
-    .icon-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column-reverse;
-        font-family: "Mont-Royal";
-        align-items: center;
-        .ion-social-octocat{
-          top: 20px;
-          font-size: 6em;
-          animation: changeColor 5s linear infinite;
-        }
-        .title {
-          letter-spacing: 3px;
-          margin: 0 0;
-        }
-    }
-  
-    .inputs-container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        min-width: 300px;
-        max-width: 400px;
-  
-      .input-container {
-        display: flex;
-        margin: 20px 0px;
-  
-        .input-title {
-          text-align: center;
-          padding: 20px;
-          flex: 1;
-        }
+    justify-content: center;
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
 
-        .input-wrapper {
-          flex: 2;
-          display: flex;
-  
-          .input {
-            flex-grow: 1;
-            font-size: 18px;
-            padding: 10px 0px;
-            height: 35px;
-            border: none;
-            border-bottom: 2px solid  $input;
-  
-            &:focus {
-                border-bottom: 2px solid $input;
-                color: $base;
-                outline: none;
-            }
+    .input-container {
+      display: flex;
+      margin: 20px 0px;
+
+      .input-title {
+        text-align: center;
+        padding: 20px;
+        flex: 1;
+      }
+
+      .input-wrapper {
+        flex: 2;
+        display: flex;
+
+        .input {
+          flex-grow: 1;
+          font-size: 18px;
+          padding: 10px 0px;
+          height: 35px;
+          border: none;
+          border-bottom: 2px solid $input;
+
+          &:focus {
+            border-bottom: 2px solid $input;
+            color: $base;
+            outline: none;
           }
-        }  
+        }
       }
     }
-  
-      .icons-container {
-        flex: 0.3;
-        display: flex;
-        justify-content: center; 
-  
-        #google_icon {
-            margin: 40px;
-            background: url('../img/google.png') 0 0 no-repeat;
-            background-size: 50px 50px;
-            height: 50px;
-            width: 50px;
-            transition:  100ms;
-        }
+  }
 
-        #facebook_icon {
-            margin: 40px;
-            background: url("../img/facebook.png") 0 0 no-repeat;
-            background-size: 50px 50px;
-            height: 50px;
-            width: 50px;
-        }
-      }
-  
-      .btn-container {
-          width: 100%;
-          flex: 1;
-          display: flex;
-          align-items: flex-end;
-          flex-direction: column;
-          justify-content: flex-end;
-    
-          .signIn{
-          color: $base;
-          background: $base-alt;
-          }
+  .icons-container {
+    flex: 0.3;
+    display: flex;
+    justify-content: center;
 
-          .signUp{
-              color: $background;
-              background: $base;
-          }
-          .btn {
-            text-align: center;
-            width: 100%;
-            padding: 20px 0px;
-            font-size: 1rem;
-          }
-      }    
+    #google_icon {
+      margin: 40px;
+      background: url("../img/google.png") 0 0 no-repeat;
+      background-size: 50px 50px;
+      height: 50px;
+      width: 50px;
+      transition: 100ms;
+    }
+
+    #facebook_icon {
+      margin: 40px;
+      background: url("../img/facebook.png") 0 0 no-repeat;
+      background-size: 50px 50px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .btn-container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .signIn {
+      color: $base;
+      background: $base-alt;
+    }
+
+    .signUp {
+      color: $background;
+      background: $base;
+    }
+    .btn {
+      text-align: center;
+      width: 100%;
+      padding: 20px 0px;
+      font-size: 1rem;
+    }
+  }
 }

@@ -2,8 +2,6 @@ import $ from "jquery";
 import * as firebase from 'firebase';
 import { config , firebaseInit } from './utils/firebase';
 import { ChatScreen, chatScreenEvents, online } from './components/ChatScreen';
-// import { createLocal } from './utils/createLocalStorage';
-import { SignUpScreen, signUpScreenEvents } from './components/SignUpScreen';
 import { LoginScreen, loginScreenEvents } from './components/LoginScreen';
 import { catImg } from '../js/utils/cats';
 

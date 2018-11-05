@@ -1,7 +1,5 @@
 import $ from 'jquery';
 import * as firebase from 'firebase';
-import { googleLogin } from '../utils/googleLogin';
-import { facebookLogin } from '../utils/facebookLogin';
 import { LoginScreen, LoginScreenEvents } from './LoginScreen';
 import { validatePassword, validateEmail } from '../utils/validation';
 
@@ -74,7 +72,7 @@ export const signUpScreenEvents = () => {
           var errorMessage = error.message;
           // ...
   
-          console.log('error message', errorMessage);
+          console.log('error message', errorMessage, 'error code ', errorCode);
         });
       }
       else {

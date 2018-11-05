@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import * as firebase from 'firebase';
-import { db, messages, users } from '../main';
+import { messages, users } from '../main';
 import { LoginScreen } from './LoginScreen';
 
 export const online = (user, catImg) => {

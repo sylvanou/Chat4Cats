@@ -1,168 +1,155 @@
 $base: #011627;
-$base-alt: #2EC4B6;
-$background: #EFFFE9;
-$background-alt: #FFFFF3;
-$input: #DDD;
+$base-alt: #2ec4b6;
+$background: #efffe9;
+$background-alt: #fffff3;
+$input: #ddd;
 
 body {
-    font-family: 'Proxima Nova Soft','Helvetica Neue',sans-serif;
-    margin: 0;
-    background: $background-alt;
+  font-family: "Proxima Nova Soft", "Helvetica Neue", sans-serif;
+  margin: 0;
+  background: $background-alt;
 }
 // Fonts
 @font-face {
-    font-family: "Mont-Royal";
-    src: url("../css/fonts/Mont-Royal.ttf");
+  font-family: "Mont-Royal";
+  src: url("../css/fonts/Mont-Royal.ttf");
 }
 
 // Media
 // Iphone 5/SE/ Samsung S5
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 360px) 
-and (orientation : portrait) {
-     /* STYLES GO HERE */ 
-     body{
-         overflow: hidden;
-         .login-container {
-             overflow: hidden;
-         }
-         
-         .login-container .inputs-container .input-container .input-wrapper .input {
-            flex-grow: 1;
-            font-size: 18px;
-            padding: 10px 0px;
-            height: 33px;
-            border: none;
-            border-bottom: 2px solid #DDD;
-            width: 200px;
-        }
-         .login-container .icon-container {
-            flex: 1.5;
-            display: flex;
-            flex-direction: column-reverse;
-            font-family: "Mont-Royal";
-            align-items: center;
-        }
-        .login-container .icons-container {
-            width: 100%;
-            flex:1;
-        }
-        .login-container .btn-container {
-        width: 100%;
-        flex: 1;
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
-        justify-content: flex-end;
-        }
-        .signup-container {
-            overflow: hidden;
-        }
-        .signup-container .icon-container {
-            flex: 1.5;
-            display: flex;
-            flex-direction: column-reverse;
-            font-family: "Mont-Royal";
-            align-items: center;
-        }
-     }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 360px) and (orientation: portrait) {
+  /* STYLES GO HERE */
+  body {
+    overflow: hidden;
+    .login-container {
+      overflow: hidden;
     }
-  
 
+    .login-container .inputs-container .input-container .input-wrapper .input {
+      flex-grow: 1;
+      font-size: 18px;
+      padding: 10px 0px;
+      height: 33px;
+      border: none;
+      border-bottom: 2px solid #ddd;
+      width: 200px;
+    }
+    .login-container .icon-container {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column-reverse;
+      font-family: "Mont-Royal";
+      align-items: center;
+    }
+    .login-container .icons-container {
+      width: 100%;
+      flex: 1;
+    }
+    .login-container .btn-container {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .signup-container {
+      overflow: hidden;
+    }
+    .signup-container .icon-container {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column-reverse;
+      font-family: "Mont-Royal";
+      align-items: center;
+    }
+  }
+}
 
-    textarea:focus, input:focus{
-    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
-    // background-color: #c49c2e;
-    outline: none;
-    border-radius: 3px;
-    border: 1px solid transparent;
-    border-top: none;
-    border-bottom: 1px solid $input;
+textarea:focus,
+input:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #fff, 0 1px 0 #fff;
+  // background-color: #c49c2e;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid $input;
 }
 
 // Iphone 6/7/8
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 375px) 
-and (orientation : portrait) {
-     /* STYLES GO HERE */ 
-     .login-container .icon-container {
-        flex: 1.2;
-        display: flex;
-        flex-direction: column-reverse;
-        font-family: "Mont-Royal";
-        align-items: center;
-    }
-    .login-container .icons-container {
-        flex: 0.5;
-    }
-    }
-
-
-
-    @keyframes changeColor {
-    0%{
-        color: #2EC4B6;
-    }
-    25%{
-        color: #c42e81;
-        transform: rotate(15deg);
-    }
-    50%{
-        color: #0b8292;
-        
-    }
-    75%{
-        color: #c49c2e;
-        transform: rotate(-15deg);
-        
-    }
-    100%{
-        color: #2EC4B6;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 375px) and (orientation: portrait) {
+  /* STYLES GO HERE */
+  .login-container .icon-container {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: "Mont-Royal";
+    align-items: center;
+  }
+  .login-container .icons-container {
+    flex: 0.5;
+  }
 }
 
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-    .login-container .icons-container {
-        flex: 0.3;
-        display: flex;
-        justify-content: center;
-    }
+@keyframes changeColor {
+  0% {
+    color: #2ec4b6;
+  }
+  25% {
+    color: #c42e81;
+    transform: rotate(15deg);
+  }
+  50% {
+    color: #0b8292;
+  }
+  75% {
+    color: #c49c2e;
+    transform: rotate(-15deg);
+  }
+  100% {
+    color: #2ec4b6;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .login-container .icons-container {
+    flex: 0.3;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @keyframes changeColor2 {
-    0%{
-        color: #2EC4B6;
-    }
-    25%{
-        color: #c42e81;
-    }
-    50%{
-        color: #0b8292;
-        
-    }
-    75%{
-        color: #c49c2e;        
-    }
-    100%{
-        color: #2EC4B6;
-    }
+  0% {
+    color: #2ec4b6;
+  }
+  25% {
+    color: #c42e81;
+  }
+  50% {
+    color: #0b8292;
+  }
+  75% {
+    color: #c49c2e;
+  }
+  100% {
+    color: #2ec4b6;
+  }
 }
 /* Scroll Bar */
 .cool-scroll-bar-17::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 10px; }
-  
-  .cool-scroll-bar-17::-webkit-scrollbar {
-    width: 6px;
-    background-color: rgba(0, 0, 0, 0); }
-  
-  .cool-scroll-bar-17::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 178, 178, 0.72);
-    border-radius: 10px; }
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+.cool-scroll-bar-17::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.cool-scroll-bar-17::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 178, 178, 0.72);
+  border-radius: 10px;
+}

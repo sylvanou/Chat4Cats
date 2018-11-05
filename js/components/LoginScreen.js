@@ -1,6 +1,4 @@
 import $ from 'jquery';
-import * as firebase from "firebase";
-// import { googleLogin, facebookLogin, emailPasswordLogin } from '../utils/logins';
 import { facebookLogin } from '../utils/facebookLogin';
 import { googleLogin } from '../utils/googleLogin';
 import { emailPasswordLogin} from '../utils/emailPasswordLogin';

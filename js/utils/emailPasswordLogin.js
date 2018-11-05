@@ -35,7 +35,7 @@ export const emailPasswordLogin = () => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 // ...
-                console.log('error message ', errorMessage);
+                console.log('error message ', errorMessage, 'error code ', errorCode);
 
                 alert('no user found with those credentials');
             });
